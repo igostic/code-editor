@@ -1,0 +1,80 @@
+@import "variables";
+@import "flex";
+
+.text-white {
+  color: $white;
+}
+
+.text-dark {
+  color: $dark;
+}
+
+.app-content {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 4rem);
+}
+
+.top {
+  flex-direction: column;
+  .editors {
+    @extend .flexrow-space-around;
+  }
+}
+
+.bottom {
+  flex-direction: column-reverse;
+  .editors {
+    @extend .flexrow-space-around;
+  }
+}
+
+.left {
+  .editors {
+    width: 60%;
+    .editor {
+      .code-section {
+        .CodeMirror{
+          max-height: 25vh;
+        }
+      }
+    }
+  }
+}
+
+.right {
+  flex-direction: row-reverse;
+  .editors {
+    width: 60%;
+    .editor {
+      .code-section {
+        .CodeMirror{
+          max-height: 25vh;
+        }
+      }
+    }
+  }
+}
+
+.editors {
+  background: $dark;
+}
+
+.output {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  background: $lightsilver;
+}
+
+.fixed {
+  @extend .center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: $black;
+  opacity: 0.9;
+}

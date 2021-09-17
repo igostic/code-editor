@@ -1,0 +1,25 @@
+@import "variables";
+
+.editor {
+  flex-grow: 1;
+  margin: 0.5rem;
+  max-width: 80vw;
+  transition: flex-grow ease-in-out 0.4s;
+}
+
+.extend-btn {
+  float: right;
+  cursor: pointer;
+}
+
+.collapsed {
+  flex-grow: 0;
+}
+
+.top-collapsed {
+  @extend .collapsed;
+}
+
+.bottom-collapsed {
+  @extend .collapsed;
+}

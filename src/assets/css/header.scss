@@ -1,0 +1,20 @@
+@import "variables";
+@import "flex";
+
+.header {
+  @extend .flexrow-space-between;
+  background: $dark;
+  padding: 0.5rem;
+}
+
+.header-title {
+  color: $white;
+}
+
+.header-button {
+  background-color: $darkop;
+}
+
+.header-right-menu {
+  @extend .flexrow;
+}
