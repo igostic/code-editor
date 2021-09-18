@@ -17,6 +17,12 @@ import "codemirror/mode/xml/xml";
 import "codemirror/mode/css/css";
 import "codemirror/mode/javascript/javascript";
 import "../../assets/css/editor.scss";
+import "codemirror/addon/edit/closebrackets.js";
+import "codemirror/addon/edit/closetag.js";
+import "codemirror/addon/edit/matchbrackets.js";
+import "codemirror/addon/edit/matchtags.js";
+import "codemirror/addon/edit/trailingspace.js";
+import "codemirror/addon/selection/mark-selection.js";
 
 import { Controlled } from "react-codemirror2";
 import { useSelector } from "react-redux";
@@ -54,6 +60,16 @@ function Editor(props) {
           theme: layout.theme,
           lineNumbers: true,
           autocorrect: true,
+          matchbrackets: true,
+          autoCloseBrackets: true,
+          styleActiveLine: true,
+          styleSelectedText: true,
+          showTrailingSpace: true,
+          indentUnit: 4,
+          indentWithTabs: false,
+          tabSize: 4,
+          autoCloseTags: true,
+          matchTags: true,
         }}
       />
     </div>

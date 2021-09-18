@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ImCodepen } from "react-icons/im";
+import { IoRocketSharp } from "react-icons/io5";
 import { BsDownload } from "react-icons/bs";
 import { FiSettings } from "react-icons/fi";
 import { HiOutlineViewGridAdd } from "react-icons/hi";
@@ -43,6 +43,7 @@ function Header(props) {
     closeMenu();
     setViewFlag(true);
   };
+  //save three different files for html, css and js
 
   const saveCode = () => {
     const code = `
@@ -79,7 +80,7 @@ function Header(props) {
       <div className="header">
         <div className="header-title">
           <h2>
-            <ImCodepen /> My CodePen
+            <IoRocketSharp /> Roc8 Editor
           </h2>
         </div>
 
